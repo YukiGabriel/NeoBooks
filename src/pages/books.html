@@ -3,16 +3,55 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeoBooks</title>
 </head>
 
 <body class="bg-gray-700">
-  <header>
-    <nav class="bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-default">
+ 
+
+  <main>
+     <div class="flex h-screen bg-gray-100">
+  <aside id="sidebar"
+    class="w-64 bg-gray-800 shadow-lg fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-300 ease-in-out z-50">
+    <div class="p-4 text-xl font-semibold text-gray-200">
+      <a href="../../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
+
+          <span class="self-center text-xl text-heading text-gray-500 font-semibold whitespace-nowrap">NeoBooks</span>
+        </a>
+    </div>
+    <nav class="mt-4">
+      <a href="../index.html" class="block py-2 px-4 text-gray-300 hover:bg-gray-200">Home</a>
+      <a href="documentation.html" class="block py-2 px-4 text-gray-300 hover:bg-gray-200">Documentation</a>
+      <a href="articles.html" class="block py-2 px-4 text-gray-300 hover:bg-gray-200">Articles</a>
+      <a href="about.html" class="block py-2 px-4 text-gray-300 hover:bg-gray-200">About</a>
+      <a href="contact.html" class="block py-2 px-4 text-gray-300 hover:bg-gray-200">Contact</a>
+    </nav>
+    <button id="menu-button z-10" class="menu-button md:hidden absolute top-4 right-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </aside>
+
+  <div class="flex-1 flex flex-col md:pl-64">
+    <header class="bg-gray-800 shadow-lg p-4">
+      <button id="menu-button" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+      <nav class="bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-default">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="../../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -34,7 +73,7 @@
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
-              <a href="index.html"
+              <a href="../../index.html"
                 class="block py-2 px-3 text-gray-500 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                 aria-current="page">Home</a>
             </li>
@@ -59,42 +98,13 @@
         </div>
       </div>
     </nav>
-
-  </header>
-
-  <main>
-    <section>
-      <section class="relative bg-gray-900 text-white overflow-hidden">
-        <div class="absolute inset-0 z-0">
-          <img src="src/images/books-banner-home.jpg" alt="Biblioteca" class="w-full h-full object-cover opacity-40" />
-        </div>
-
-        <div
-          class="relative z-10 container mx-auto px-6 py-20 md:py-32 lg:py-48 flex flex-col items-center text-center">
-          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-3xl">
-            Comece a ler <span class="text-gray-500">livros agora</span>
-          </h1>
-          <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-            Milhares de títulos, do romance à ficção científica, esperando por você em nossa biblioteca digital.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="src/pages/books.html"
-              class="bg-gray-500 hover:bg-gray-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300">
-              Explorar Catálogo
-            </a>
-            <a href="#"
-              class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 py-3 px-8 rounded-lg transition duration-300">
-              Sobre Nós
-            </a>
-          </div>
-        </div>
-        </div>
-      </section>
+    </header>
+    
+  </div>
+  </div>
   </main>
 
   <footer></footer>
-
-  <script src="src/js/main.js"></script>
 </body>
 
 </html>
